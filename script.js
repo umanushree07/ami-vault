@@ -59,24 +59,22 @@ function unlockVideo(btn) {
   const overlay = card.querySelector(".ad-overlay");
   const video = card.querySelector("video");
 
-  // Disable button
+  // 1️⃣ OPEN AD (must be direct user action)
+  window.open(
+    "https://pl28378222.effectivegatecp.com/6d/42/db/6d42db23e1b279eacdeb73b3c3d0060e.js",
+    "_blank"
+  );
+
+  // 2️⃣ UI feedback
   btn.disabled = true;
   btn.innerText = "Ad Playing...";
 
-  // 🔹 Create script element properly
-  const adScript = document.createElement("script");
-  adScript.src = "https://pl28378222.effectivegatecp.com/6d/42/db/6d42db23e1b279eacdeb73b3c3d0060e.js";
-  adScript.async = true;
-
-  // Insert ad script into overlay
-  overlay.insertBefore(adScript, btn);
-
-  // ⏳ Wait for ad time
+  // 3️⃣ UNLOCK AFTER TIME
   setTimeout(() => {
     overlay.style.display = "none";
     video.muted = false;
     video.play();
-  }, 8000); // adjust if needed
+  }, 8000); // adjust time
 }
 
 /* DOWNLOAD UNLOCK (WATCH AD TO DOWNLOAD) */
