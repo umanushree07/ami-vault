@@ -70,7 +70,7 @@ function unlockVideo(btn) {
   btn.innerText = "Ad Playing...";
 
   // 3️⃣ UNLOCK AFTER TIME
-  setTimeout(() => {
+  setTimeout((15) => {
     overlay.style.display = "none";
     video.muted = false;
     video.play();
