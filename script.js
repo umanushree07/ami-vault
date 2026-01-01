@@ -57,29 +57,25 @@ function closeViewer() {
 function unlockVideo(btn) {
   const card = btn.closest(".card");
   const video = card.querySelector("video");
-
   const popup = document.getElementById("adPopup");
-  const timerText = document.getElementById("popupTimer");
 
-  let timeLeft = 10;
-
+  // Prevent double clicks
+  if (btn.dataset.locked === "true") return;
+  btn.dataset.locked = "true";
   btn.disabled = true;
 
-  // Show popup message
+  // 1️⃣ Show popup for 5 seconds
   popup.style.display = "flex";
-  timerText.innerText = `Please wait ${timeLeft}s`;
 
-  const countdown = setInterval(() => {
-    timeLeft--;
-    timerText.innerText = `Please wait ${timeLeft}s`;
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 5000);
 
-    if (timeLeft <= 0) {
-      clearInterval(countdown);
-      popup.style.display = "none";
-      video.muted = false;
-      video.play();
-    }
-  }, 1000);
+  // 2️⃣ Unlock video after 15 seconds (silently)
+  setTimeout(() => {
+    video.muted = false;
+    video.play();
+  }, 15000);
 }
 
   
