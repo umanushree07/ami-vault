@@ -39,10 +39,15 @@
 
 <section class="hero">
 
-  <h2>Welcome to ARMI Vault</h2>
+  <h2>Welcome to AMI Vault</h2>
 
-  <p>Army Vault is a fan-run archive that organizes and preserves BTS content in one accessible space. Created by ARMY, for ARMY, it aims to make exploring BTS content simple, structured, and enjoyable.
-</p>
+  <p> Army Vault is a dedicated digital platform created to keep media content organized, accessible, and easy to manage in one place. It allows users to explore, view, and revisit curated content through a clean and simple interface designed for everyday use.
+The platform focuses on smooth navigation, reliable performance, and a comfortable experience across devices. 
+
+<br>
+<br>
+Army Vault is built with the idea of making content feel structured yet personal so users can enjoy what matters without distraction or complexity.
+More than just a storage space, Army Vault represents a shared environment where content is handled with care and consistency, making it easier for fans to stay connected with the moments they value most.</p>
   
   
  <br>
@@ -72,7 +77,7 @@
 
     <div class="ad-overlay">
 
-      <button onclick="watchAd(this)">Watch Ad to Play</button>
+      <button onclick="unlockVideo(this)">Watch Ad to Play</button>
 
     </div>
   </div>
@@ -84,11 +89,15 @@
   </button>
 </div>
 
-  <button onclick="showAd()">Download</button>
+  <button onclick="unlockDownload(this)">Watch Ad to Download</button>
+
+  <a href="file.pdf"
+  download class="download-link"
+  style="display: none;"></a>
 </div>
 </div>
 
-    <h3> Documentary </h3>
+    <h3> Documentary Movies</h3>
      <div class="grid">
 
     <div class="card bounce">
@@ -101,7 +110,7 @@
 
     <div class="ad-overlay">
 
-      <button onclick="watchAd(this)">Watch Ad to Play</button>
+       <button onclick="unlockVideo(this)">Watch Ad to Play</button>
 
     </div>
   </div>
@@ -112,33 +121,91 @@
     ❤️ <span>0</span>
   </button>
 </div>
-    <button onclick="showAd()">Download</button>
+    <button onclick="unlockDownload(this)">Watch Ad to Download</button>
+
+  <a href="file.pdf"
+  download class="download-link"
+  style="display: none;"></a>
 </div>
 </div>
 
+<h3> Documentary Series </h3>
+     <div class="grid">
+
+    <div class="card bounce">
+
+  <div class="video-box">
+
+    <img src="images/HOTS doc.jpeg" class="thumbnail">
+
+    <video src="sample.mp4" controls muted preload="none"></video>
+
+    <div class="ad-overlay">
+
+      <button onclick="unlockVideo(this)">Watch Ad to Play</button>
+
+    </div>
+  </div>
       
+<h4>HOTS orginial</h4>
+<div class="like-section">
+  <button class="like-btn" onclick="likeVideo(this)">
+    ❤️ <span>0</span>
+  </button>
+</div>
+    <button onclick="unlockDownload(this)">Watch Ad to Download</button>
 
+  <a href="file.pdf"
+  download class="download-link"
+  style="display: none;"></a>
+</div>
+</div>
     
 
-    <div class="card">
+<!-- FILES SECTION -->
+ <!--
+<section class="files">
+  <h3>Latest Books & Files</h3>
 
-      <video src="sample.mp4" controls></video>
+  <div class="file-grid">
+  -->
+    <!-- FILE CARD 
+    <div class="file-card">
+      <img src="images/pdf-icon.png" class="file-thumb">
+      <h4>Army Notes PDF</h4>
 
-      <h4>Fan Edit</h4>
+      <button onclick="viewFile('files/army-notes.pdf')">View</button>
+      <button onclick="downloadFile('files/army-notes.pdf')">Download</button>
+    </div>
+  -->
+    <!-- IMAGE FILE 
+    <div class="file-card">
+      <img src="files/wallpaper.jpg" class="file-thumb">
+      <h4>Army Wallpaper</h4>
 
-      <button onclick="showAd()">Download</button>
-
+      <button onclick="viewFile('files/wallpaper.jpg')">View</button>
+      <button onclick="downloadFile('files/wallpaper.jpg')">Download</button>
     </div>
 
   </div>
+</section>
+-->
+<!-- FILE VIEWER MODAL 
+<div id="fileViewer" class="file-viewer">
+  <span onclick="closeViewer()">✖</span>
+  <iframe id="fileFrame"></iframe>
+</div>
+
+-->
 
 </section>
 
 <!-- FOOTER -->
 
 <footer>
+  <p> Dedicated to ARMY - bound by music,memories and love</p>
 
-  <p>© 2025 Army Vault | Fan Made Platform</p>
+  <p>© 2025 Ami Vault | all rights reserved</p>
 
 </footer>
 
