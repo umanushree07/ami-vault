@@ -61,6 +61,17 @@ function unlockVideo(btn) {
 
   // 1️⃣ OPEN AD (must be direct user action)
   window.open (
+<script>
+  atOptions = {
+    'key' : '22d181936b3cee99d2a8152957148b70',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/22d181936b3cee99d2a8152957148b70/invoke.js"></script>
+
   );
 
   // 2️⃣ UI feedback
