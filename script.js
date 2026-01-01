@@ -58,23 +58,36 @@ function unlockVideo(btn) {
   const card = btn.closest(".card");
   const video = card.querySelector("video");
   const popup = document.getElementById("adPopup");
+  const overlay = card.querySelector(".ad-overlay");
 
-  // Prevent double clicks
+  // Prevent multiple clicks
   if (btn.dataset.locked === "true") return;
   btn.dataset.locked = "true";
   btn.disabled = true;
 
-  // 1️⃣ Show popup for 5 seconds
+  // Show popup for 5 seconds
   popup.style.display = "flex";
-
   setTimeout(() => {
     popup.style.display = "none";
   }, 5000);
 
-  // 2️⃣ Unlock video after 15 seconds (silently)
+  // Unlock after 15 seconds
   setTimeout(() => {
-    video.muted = false;
-    video.play();
+    // 1️⃣ Remove overlay
+    if (overlay) overlay.style.display = "none";
+
+    // 2️⃣ Enable controls
+    video.controls = true;
+
+    // 3️⃣ Keep muted = false ONLY if user clicks play
+    video.muted = true; // keep muted to avoid autoplay block
+
+    // 4️⃣ Visual cue
+    video.classList.add("unlocked");
+
+    // OPTIONAL: scroll into view
+    video.scrollIntoView({ behavior: "smooth", block: "center" });
+
   }, 15000);
 }
 
