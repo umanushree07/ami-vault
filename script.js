@@ -64,6 +64,12 @@ function unlockVideo(btn) {
     "afterbegin",
     `
     <!-- 🔽 AD SCRIPT GOES HERE 🔽 -->
+
+<script src="https://pl28378222.effectivegatecpm.com/6d/42/db/6d42db23e1b279eacdeb73b3c3d0060e.js"></script>
+
+
+
+
     `
   );
 
@@ -87,6 +93,10 @@ function unlockDownload(btn) {
   adBox.className = "download-ad";
   adBox.innerHTML = `
     <!-- 🔽 PASTE YOUR DOWNLOAD AD SCRIPT HERE 🔽 -->
+
+<script src="https://pl28378222.effectivegatecpm.com/6d/42/db/6d42db23e1b279eacdeb73b3c3d0060e.js"></script>
+
+
   `;
 
   // Insert ad above the button
