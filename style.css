@@ -774,3 +774,60 @@ background:transparent;
 .video-box {
   position: relative;
 }
+
+.video-box {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* iframe */
+.video-frame {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* thumbnail */
+.thumbnail {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2; /* BELOW overlay */
+}
+
+.thumbnail.hide {
+  display: none;
+}
+
+/* AD OVERLAY (IMPORTANT) */
+.ad-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5; /* ABOVE everything */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.4);
+}
+
+/* BUTTON STYLE */
+.watch-btn {
+  background: #6b4eff;
+  color: #fff;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+}
