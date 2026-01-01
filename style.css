@@ -693,7 +693,6 @@ background:transparent;
   border-radius: 6px;
 }
 
-
 .popup {
   position: fixed;
   inset: 0;
@@ -709,5 +708,6 @@ background:transparent;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  max-width: 280px;
+  max-width: 300px;
+  font-weight: 600;
 }
