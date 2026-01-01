@@ -59,28 +59,24 @@ function unlockVideo(btn) {
   const overlay = card.querySelector(".ad-overlay");
   const video = card.querySelector("video");
 
-  // Insert ad script dynamically
-  overlay.insertAdjacentHTML(
-    "afterbegin",
-    `
-    <!-- 🔽 AD SCRIPT GOES HERE 🔽 -->
-
-<script src="https://pl28378222.effectivegatecpm.com/6d/42/db/6d42db23e1b279eacdeb73b3c3d0060e.js"></script>
-
-
-
-
-    `
-  );
-
+  // Disable button
   btn.disabled = true;
   btn.innerText = "Ad Playing...";
 
+  // 🔹 Create script element properly
+  const adScript = document.createElement("script");
+  adScript.src = "https://pl28378222.effectivegatecp.com/6d/42/db/6d42db23e1b279eacdeb73b3c3d0060e.js";
+  adScript.async = true;
+
+  // Insert ad script into overlay
+  overlay.insertBefore(adScript, btn);
+
+  // ⏳ Wait for ad time
   setTimeout(() => {
     overlay.style.display = "none";
     video.muted = false;
     video.play();
-  }, 8000);
+  }, 8000); // adjust if needed
 }
 
 /* DOWNLOAD UNLOCK (WATCH AD TO DOWNLOAD) */
