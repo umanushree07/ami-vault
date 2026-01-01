@@ -154,40 +154,42 @@ AMI Vault is built with the idea of making content feel structured yet personal 
      <div class="grid">
 
     <div class="card bounce">
-
   <div class="video-box">
 
-  <img src="images/HOTS doc.jpeg" class="thumbnail">
+    <!-- Thumbnail -->
+    <img src="images/HOTS doc.jpeg" class="thumbnail" alt="Video thumbnail">
 
-  <!-- LYKSTAGE EMBED -->
-  <div class="video-frame">
-    <iframe
-      src="https://lykstage.com/l/BY1GT6GT6JQ9IR8AZ0"
-      frameborder="0"
-      allow="autoplay; encrypted-media; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <div class="ad-overlay">
-    <button onclick="watchAd(this)">Watch Ad to Play</button>
-  </div>
-
-</div>
+    <!-- Video iframe -->
+    <div class="video-frame">
+      <iframe
+        data-src="https://lykstage.com/l/BY1GT6GT6JQ9IR8AZ0"
+        frameborder="0"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
-  </div>
-      
-<h4>HOTS orginial</h4>
-<div class="like-section">
-  <button class="like-btn" onclick="likeVideo(this)">
-    ❤️ <span>0</span>
-  </button>
-</div>
-    <button onclick="unlockDownload(this)">Watch Ad to Download</button>
 
-  <a href="file.pdf"
-  download class="download-link"
-  style="display: none;"></a>
+    <!-- Ad overlay -->
+    <div class="ad-overlay">
+      <button class="watch-btn" onclick="watchAd(this)">
+        Watch Ad to Play
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Video info -->
+  <h4>HOTS original</h4>
+
+  <div class="like-section">
+    <button class="like-btn" onclick="likeVideo(this)">
+      ❤️ <span>0</span>
+    </button>
+  </div>
+
+  <button class="download-btn" onclick="showAd()">
+    Watch Ad to Download
+  </button>
 </div>
 </div>
     
