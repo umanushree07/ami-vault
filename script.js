@@ -59,33 +59,37 @@ function unlockVideo(btn) {
   const overlay = card.querySelector(".ad-overlay");
   const video = card.querySelector("video");
 
-  // 1️⃣ OPEN AD (must be direct user action)
-  window.open (
-<script>
-  atOptions = {
-    'key' : '22d181936b3cee99d2a8152957148b70',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/22d181936b3cee99d2a8152957148b70/invoke.js"></script>
+  let timeLeft = 10;
 
-  );
-
-  // 2️⃣ UI feedback
+  // Disable button
   btn.disabled = true;
-  btn.innerText = "Ad Playing...";
+  btn.innerText = "Ad opened…";
 
-  // 3️⃣ UNLOCK AFTER TIME
-  setTimeout((15) => {
-    overlay.style.display = "none";
-    video.muted = false;
-    video.play();
-  }, 8000); // adjust time
+  // Show overlay
+  overlay.style.display = "flex";
+  overlay.innerHTML = `
+    <div style="text-align:center">
+      <p id="adMsg">Ad opened in new tab</p>
+      <p id="countdown">Please wait ${timeLeft} seconds</p>
+    </div>
+  `;
+
+  const countdownEl = overlay.querySelector("#countdown");
+
+  const timer = setInterval(() => {
+    timeLeft--;
+    countdownEl.innerText = `Please wait ${timeLeft} seconds`;
+
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+
+      overlay.style.display = "none";
+      video.muted = false;
+      video.play();
+    }
+  }, 1000);
 }
-
+  
 /* DOWNLOAD UNLOCK (WATCH AD TO DOWNLOAD) */
 function unlockDownload(btn) {
   const card = btn.closest(".card");
