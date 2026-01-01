@@ -55,33 +55,32 @@ function closeViewer() {
 
 /* VIDEO UNLOCK (WATCH AD TO PLAY) */
 function watchAd(btn) {
-  alert("JS is working"); // TEMP CHECK – you MUST see this first
+  const box = btn.closest('.video-box');
+  const iframe = box.querySelector('iframe');
+  const thumbnail = box.querySelector('.thumbnail');
+  const overlay = box.querySelector('.ad-overlay');
 
-  const popup = document.getElementById("popup");
-  const box = btn.closest(".video-box");
-  const iframe = box.querySelector("iframe");
-  const thumbnail = box.querySelector(".thumbnail");
-  const overlay = box.querySelector(".ad-overlay");
+  const popupAd = document.getElementById('popup-ad');
+  const popupUnlock = document.getElementById('popup-unlock');
 
-  // POPUP 1 – 5 sec
-  popup.innerText = "Watch the ad and return to unlock the video";
-  popup.style.display = "block";
+  // POPUP 1 – show for 5 sec
+  popupAd.style.display = 'block';
 
   setTimeout(() => {
-    popup.style.display = "none";
+    popupAd.style.display = 'none';
   }, 5000);
 
   // POPUP 2 – after 15 sec
   setTimeout(() => {
-    popup.innerText = "Video unlocked and ready to watch";
-    popup.style.display = "block";
+    popupUnlock.style.display = 'block';
 
-    iframe.src = iframe.dataset.src + "?autoplay=1";
-    thumbnail.classList.add("hide");
-    overlay.style.display = "none";
+    // unlock video
+    iframe.src = iframe.dataset.src + '?autoplay=1';
+    thumbnail.classList.add('hide');
+    overlay.style.display = 'none';
 
     setTimeout(() => {
-      popup.style.display = "none";
+      popupUnlock.style.display = 'none';
     }, 3000);
 
   }, 15000);
