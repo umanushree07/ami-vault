@@ -117,3 +117,27 @@ function unlockDownload(btn) {
     btn.style.display = "none";
   }, 8000); // adjust time if needed
 }
+
+
+
+<script>
+function watchAd(btn) {
+  const videoBox = btn.closest('.video-box');
+  const thumbnail = videoBox.querySelector('.thumbnail');
+  const overlay = videoBox.querySelector('.ad-overlay');
+  const iframe = videoBox.querySelector('iframe');
+
+  // Simulate ad watch (your existing logic)
+  setTimeout(() => {
+    // Hide overlay
+    overlay.style.display = 'none';
+
+    // Hide thumbnail
+    thumbnail.classList.add('hide');
+
+    // Auto play video
+    iframe.src += (iframe.src.includes('?') ? '&' : '?') + 'autoplay=1';
+
+  }, 5000); // example: 5 sec ad
+}
+</script>
