@@ -56,39 +56,32 @@ function closeViewer() {
 /* VIDEO UNLOCK (WATCH AD TO PLAY) */
 function unlockVideo(btn) {
   const card = btn.closest(".card");
-  const overlay = card.querySelector(".ad-overlay");
   const video = card.querySelector("video");
+
+  const popup = document.getElementById("adPopup");
+  const timerText = document.getElementById("popupTimer");
 
   let timeLeft = 10;
 
-  // Disable button
   btn.disabled = true;
-  btn.innerText = "Ad opened…";
 
-  // Show overlay
-  overlay.style.display = "flex";
-  overlay.innerHTML = `
-    <div style="text-align:center">
-      <p id="adMsg">Ad opened in new tab</p>
-      <p id="countdown">Please wait ${timeLeft} seconds</p>
-    </div>
-  `;
+  // Show popup message
+  popup.style.display = "flex";
+  timerText.innerText = `Please wait ${timeLeft}s`;
 
-  const countdownEl = overlay.querySelector("#countdown");
-
-  const timer = setInterval(() => {
+  const countdown = setInterval(() => {
     timeLeft--;
-    countdownEl.innerText = `Please wait ${timeLeft} seconds`;
+    timerText.innerText = `Please wait ${timeLeft}s`;
 
     if (timeLeft <= 0) {
-      clearInterval(timer);
-
-      overlay.style.display = "none";
+      clearInterval(countdown);
+      popup.style.display = "none";
       video.muted = false;
       video.play();
     }
   }, 1000);
 }
+
   
 /* DOWNLOAD UNLOCK (WATCH AD TO DOWNLOAD) */
 function unlockDownload(btn) {
