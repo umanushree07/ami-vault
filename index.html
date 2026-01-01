@@ -117,31 +117,36 @@ AMI Vault is built with the idea of making content feel structured yet personal 
 <br>
 
     <h3> Documentary Movies</h3>
-     <div class="grid">
+     
 
-    <div class="card bounce">
+<div class="video-scroll">
 
-  <div class="video-box">
+  <!-- CARD -->
+  <div class="media-card">
+    <div class="thumbnail" onclick="playVideo(this)">
+      <img src="https://via.placeholder.com/800x450" alt="Thumbnail">
+      <div class="play-btn">▶</div>
 
-    <img src="images/HOTS doc.jpeg" class="thumbnail">
+      <!-- hidden iframe -->
+      <iframe 
+        src="https://lykstage.com/l/BY1GT6GT6JQ9IR8AZ0"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
 
-   <iframe width="560" height="315" src="https://lykstage.com/l/BY1GT6GT6JQ9IR8AZ0" title="LykStage video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h3 class="media-title">HOTS Original</h3>
 
+    <div class="actions">
+      <button>❤️</button>
+      <button>💬</button>
+      <a href="#">⬇</a>
+    </div>
   </div>
-      
-<h4>HOTS orginial</h4>
-<div class="like-section">
-  <button class="like-btn" onclick="likeVideo(this)">
-    ❤️ <span>0</span>
-  </button>
-</div>
-    <button onclick="unlockDownload(this)">Watch Ad to Download</button>
 
-  <a href="file.pdf"
-  download class="download-link"
-  style="display: none;"></a>
 </div>
-</div>
+
+
 
 <br>
 
