@@ -42,3 +42,26 @@ function watchAd(btn) {
   }, 5000);
 
 }
+
+// Load saved likes when page opens
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".like-btn").forEach(btn => {
+    const id = btn.dataset.id;
+    const savedLikes = localStorage.getItem(id);
+    if (savedLikes) {
+      btn.querySelector("span").innerText = savedLikes;
+    }
+  });
+});
+
+// Like function
+function likeVideo(btn) {
+  const span = btn.querySelector("span");
+  const id = btn.dataset.id;
+
+  let count = parseInt(span.innerText);
+  count++;
+
+  span.innerText = count;
+  localStorage.setItem(id, count);
+}
