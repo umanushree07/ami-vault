@@ -446,8 +446,7 @@ title{
   position: absolute;
 
   inset: 0;
-
-  background: rgba(124, 58, 237, 0.85);
+background:transparent;
 
   display: flex;
 
@@ -469,7 +468,7 @@ title{
 
   background: white;
 
-  color: #7c3aed;
+  color: transparent;
 
   font-weight: 700;
 
@@ -546,7 +545,7 @@ title{
 
   inset: 0;
 
-  background: rgba(124, 58, 237, 0.85);
+  background: transparent;
 
   display: flex;
 
@@ -588,4 +587,24 @@ title{
 
   display: none;
 
+}
+.like-section {
+  margin-top: 10px;
+}
+
+.like-btn {
+  background: #ede9fe;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 15px;
+  color: #7c3aed;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.like-btn:hover {
+  background: #ddd6fe;
+  transform: scale(1.05);
 }
