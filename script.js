@@ -60,9 +60,7 @@ function unlockVideo(btn) {
   const video = card.querySelector("video");
 
   // 1️⃣ OPEN AD (must be direct user action)
-  window.open(
-    "https://pl28378222.effectivegatecp.com/6d/42/db/6d42db23e1b279eacdeb73b3c3d0060e.js",
-   
+  window.open (
   );
 
   // 2️⃣ UI feedback
