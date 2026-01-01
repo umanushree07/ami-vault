@@ -1,0 +1,591 @@
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: "Segoe UI", Arial, sans-serif;
+
+}
+.logo {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+}
+
+.logo img {
+
+  height: 42px;
+
+  width: auto;
+
+}
+
+.logo span {
+
+  font-size: 24px;
+
+  font-weight: 800;
+
+  background: linear-gradient(90deg, #7c3aed, #9f67ff);
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+}
+
+/* ROOT COLORS (BASED ON YOUR IMAGE) */
+
+:root {
+
+  --purple-main: #7c3aed;
+
+  --purple-soft: #ede9fe;
+
+  --purple-light: #f5f3ff;
+
+  --purple-dark: #4c1d95;
+
+  --white: #ffffff;
+
+}
+
+/* BODY */
+
+body {
+
+  background: var(--white);
+
+  color: var(--purple-dark);
+
+}
+
+/* NAVBAR */
+
+.navbar {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 18px 50px;
+
+  background: var(--white);
+
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.15);
+
+}
+
+.navbar h1 {
+
+  font-size: 26px;
+
+  font-weight: 800;
+
+  background: linear-gradient(90deg, var(--purple-main), #9f67ff);
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+}
+
+.navbar nav a {
+
+  margin-left: 28px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  color: var(--purple-dark);
+
+  position: relative;
+
+}
+
+.navbar nav a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -6px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: linear-gradient(90deg, var(--purple-main), #9f67ff);
+
+  transition: 0.3s;
+
+}
+
+.navbar nav a:hover::after {
+
+  width: 100%;
+
+}
+
+/* HERO */
+
+.hero {
+
+  text-align: center;
+
+  padding: 110px 20px;
+
+  background:
+
+    linear-gradient(135deg, rgba(124,58,237,0.12), rgba(159,103,255,0.08));
+
+}
+
+.hero h2 {
+
+  font-size: 44px;
+
+  font-weight: 800;
+
+}
+
+.hero p {
+
+  margin-top: 15px;
+
+  font-size: 18px;
+
+  color: var(--purple-main);
+
+}
+
+.hero button {
+
+  margin-top: 32px;
+
+  padding: 14px 42px;
+
+  border-radius: 30px;
+
+  border: none;
+
+  background: linear-gradient(90deg, var(--purple-main), #9f67ff);
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 12px 30px rgba(124, 58, 237, 0.4);
+
+  transition: 0.3s;
+
+}
+
+.hero button:hover {
+
+  transform: scale(1.05);
+
+}
+
+/* VIDEOS SECTION */
+
+.videos {
+
+  padding: 80px 50px;
+
+}
+
+.videos h3 {
+
+  font-size: 28px;
+
+  margin-bottom: 40px;
+
+  color: var(--purple-main);
+
+}
+
+/* GRID */
+
+.grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 32px;
+
+}
+
+/* CARD */
+
+.card {
+
+  background: var(--white);
+
+  padding: 18px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 12px 35px rgba(124, 58, 237, 0.18);
+
+  transition: 0.35s;
+
+}
+
+.card:hover {
+
+  transform: translateY(-10px);
+
+  box-shadow: 0 18px 45px rgba(124, 58, 237, 0.28);
+
+}
+
+.card video {
+
+  width: 100%;
+
+  border-radius: 14px;
+
+}
+
+.card h4 {
+
+  margin-top: 14px;
+
+  font-size: 16px;
+
+  color: var(--purple-dark);
+
+}
+
+/* DOWNLOAD BUTTON */
+
+.card button {
+
+  margin-top: 14px;
+
+  width: 100%;
+
+  padding: 12px;
+
+  border-radius: 25px;
+
+  border: none;
+
+  background: var(--purple-soft);
+
+  color: var(--purple-main);
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+.card button:hover {
+
+  background: linear-gradient(90deg, var(--purple-main), #9f67ff);
+
+  color: white;
+
+}
+
+/* FOOTER */
+
+footer {
+
+  margin-top: 70px;
+
+  padding: 28px;
+
+  text-align: center;
+
+  background: var(--purple-light);
+
+  color: var(--purple-main);
+
+  font-size: 14px;
+
+}
+.note{
+
+  font-size:12px;
+
+  font-style:italic;
+
+  color:#666;
+  }
+
+title{
+
+  font-family: 'Playfair Display', serif; /* Elegant look */
+
+  font-size: 26px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  background: linear-gradient(90deg, #7c3aed, #9f67ff);
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+}
+/* VIDEO BOX */
+
+.video-box {
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+}
+
+/* THUMBNAIL */
+
+.thumbnail {
+
+  width: 100%;
+
+  display: block;
+
+  cursor: pointer;
+
+}
+
+/* HIDE VIDEO INITIALLY */
+
+.video-box video {
+
+  width: 100%;
+
+  display: none;
+
+  border-radius: 14px;
+
+}
+
+/* SHOW VIDEO ON CLICK */
+
+.video-box.active video {
+
+  display: block;
+
+}
+
+.video-box.active .thumbnail {
+
+  display: none;
+
+}
+
+/* BOUNCE ANIMATION */
+
+.bounce {
+
+  animation: bounceIn 0.8s ease;
+
+}
+
+@keyframes bounceIn {
+
+  0% {
+
+    opacity: 0;
+
+    transform: scale(0.9) translateY(20px);
+
+  }
+
+  60% {
+
+    opacity: 1;
+
+    transform: scale(1.05) translateY(-5px);
+
+  }
+
+  100% {
+
+    transform: scale(1) translateY(0);
+
+  }
+
+}
+.video-box {
+
+  position: relative;
+
+}
+
+.ad-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(124, 58, 237, 0.85);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 14px;
+
+}
+
+.ad-overlay button {
+
+  padding: 12px 22px;
+
+  border-radius: 30px;
+
+  border: none;
+
+  background: white;
+
+  color: #7c3aed;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+}
+
+.video-box video {
+
+  display: none;
+
+}
+
+.video-box.unlocked video {
+
+  display: block;
+
+}
+
+.video-box.unlocked .thumbnail,
+
+.video-box.unlocked .ad-overlay {
+
+  display: none;
+
+}
+.video-box {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 180px; /* 👈 THIS FIXES IT */
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  background: #e9d5ff;
+
+}
+
+/* Thumbnail */
+
+.thumbnail {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  cursor: pointer;
+
+}
+
+/* Video */
+
+.video-box video {
+
+  width: 100%;
+
+  height: 100%;
+
+  display: none;
+
+}
+
+/* Ad overlay */
+
+.ad-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(124, 58, 237, 0.85);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+.ad-overlay button {
+
+  padding: 12px 22px;
+
+  border-radius: 30px;
+
+  border: none;
+
+  background: white;
+
+  color: #7c3aed;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+}
+
+/* When unlocked */
+
+.video-box.unlocked video {
+
+  display: block;
+
+}
+
+.video-box.unlocked .thumbnail,
+
+.video-box.unlocked .ad-overlay {
+
+  display: none;
+
+}
