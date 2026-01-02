@@ -1,11 +1,14 @@
 <script>
-/* PLAY VIDEO */
+/* 
+/* =========================
+   PLAY VIDEO + COOKIE POPUP
+========================= */
 function startVideo(id) {
   const popup = document.getElementById("cookiePopup");
   const thumb = document.getElementById("thumb-" + id);
   const video = document.getElementById("video-" + id);
 
-  console.log(popup, thumb, video); // DEBUG LINE
+  console.log(popup, thumb, video); // DEBUG
 
   if (!popup || !thumb || !video) {
     alert("ID mismatch – check thumb/video IDs");
@@ -21,7 +24,9 @@ function startVideo(id) {
   }, 5000);
 }
 
-/* LOAD LIKES */
+/* =========================
+   LOAD LIKES ON PAGE LOAD
+========================= */
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".like-btn").forEach(btn => {
     const id = btn.dataset.id;
@@ -34,15 +39,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-/* LIKE BUTTON */
+/* =========================
+   LIKE BUTTON
+========================= */
 function likeVideo(btn) {
   const span = btn.querySelector("span");
   const id = btn.dataset.id;
 
-  let count = parseInt(span.innerText) || 0;
+  if (!id) {
+    alert("Missing data-id on like button");
+    return;
+  }
+
+  let count = parseInt(span.innerText, 10) || 0;
   count++;
 
   span.innerText = count;
   localStorage.setItem("likes-" + id, count);
 }
-</script>
