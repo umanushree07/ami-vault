@@ -414,3 +414,26 @@ footer {
   color: #888;
   margin-top: 10px;
 }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  padding: 12px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
