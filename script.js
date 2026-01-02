@@ -22,9 +22,7 @@ function startVideo(id) {
   }, 5000);
 }
 
-/* =========================
-   LOAD LIKES ON PAGE LOAD
-========================= */
+
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".like-btn").forEach(btn => {
     const id = btn.dataset.id;
