@@ -73,26 +73,29 @@ AMI Vault is built with the idea of making content feel structured yet personal 
 
   <div class="video-box">
 
-    <img src="images/HOTS orginial.jpeg" class="thumbnail">
+  
 
+ <div class="thumbnail-container" id="thumbBox">
+    <img src="images/HOTS orginial.jpeg" class="thumbnail" alt="Video Thumbnail">
+    <button class="play-btn" onclick="startVideo()">▶</button>
+  </div>
 
-  <div class="video-frame">
-    <iframe  data-src="https://lykstage.com/l/BY1GT6GT6JQ9IR8AZ0" title="HOTS original" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <!-- Iframe (Hidden initially) -->
+  <div class="video-frame" id="videoBox">
+    <iframe 
+      src="https://lykstage.com/l/BY1GT6GT6JQ9IR8AZ0?autoplay=1"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
+
 </div>
-    <div class="ad-overlay">
 
-      <button class="Watch-btn"onclick="watchAd(this)">Click This</button>
-
-<script>
-  atOptions = {
-    'key' : '22d181936b3cee99d2a8152957148b70',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/22d181936b3cee99d2a8152957148b70/invoke.js"></script>
+<!-- Cookie Popup -->
+<div class="cookie-popup" id="cookiePopup">
+  Accept all cookies to continue watching
+</div>
 
 
     </div>
