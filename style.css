@@ -334,3 +334,12 @@ footer {
   color: #4a148c;          /* darker purple on hover */
   transform: translateY(-1px);
 }
+
+.ad-banner {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.ad-banner.small {
+  margin: 12px auto;
+}
