@@ -71,18 +71,19 @@ AMI Vault is built with the idea of making content feel structured yet personal 
 
     <div class="card bounce">
 
-  <div class="video-box">
+  <div class="video-card">
 
-  
-
- <div class="thumbnail-container" id="thumbBox">
-    <img src="images/HOTS orginial.jpeg" class="thumbnail" alt="Video Thumbnail">
-    <button class="play-btn" onclick="startVideo()">▶</button>
+  <!-- Thumbnail -->
+  <div class="thumbnail-container" id="thumbBox">
+    <img src="thumbnail.jpg" alt="Thumbnail">
+    <div class="play-overlay" onclick="startVideo()">
+      ▶
+    </div>
   </div>
 
-  <!-- Iframe (Hidden initially) -->
+  <!-- Video iframe -->
   <div class="video-frame" id="videoBox">
-    <iframe 
+    <iframe
       src="https://lykstage.com/l/BY1GT6GT6JQ9IR8AZ0?autoplay=1"
       frameborder="0"
       allow="autoplay; encrypted-media"
@@ -92,15 +93,12 @@ AMI Vault is built with the idea of making content feel structured yet personal 
 
 </div>
 
-<!-- Cookie Popup -->
+<!-- Cookie popup -->
 <div class="cookie-popup" id="cookiePopup">
   Accept all cookies to continue watching
 </div>
 
 
-    </div>
-  </div>
-      
 <h4>HOTS orginial</h4>
 <div class="like-section">
   <button class="like-btn" onclick="likeVideo(this)">
