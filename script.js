@@ -57,3 +57,5 @@ function likeVideo(btn) {
   span.innerText = count;
   localStorage.setItem("likes-" + id, count);
 }
+
+alert("SCRIPT LOADED");
