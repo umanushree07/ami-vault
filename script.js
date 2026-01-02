@@ -15,6 +15,18 @@ function startVideo() {
     document.getElementById("videoBox").style.display = "block";
   }, 5000);
 }
+
+<script>
+function startVideo() {
+  document.getElementById("cookiePopup").style.display = "block";
+
+  setTimeout(() => {
+    document.getElementById("cookiePopup").style.display = "none";
+    document.getElementById("thumbBox").style.display = "none";
+    document.getElementById("videoBox").style.display = "block";
+  }, 5000);
+}
+</script>
 </script>
 
 // Load saved likes when page opens
