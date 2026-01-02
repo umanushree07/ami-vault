@@ -65,20 +65,26 @@ function watchAdForDownload(button) {
   const unlockPopup = section.querySelector("#unlockPopup");
   const downloadLink = section.querySelector(".download-link");
 
-  // Show first popup
-  adPopup.style.display = "block";
   button.disabled = true;
 
-  // After 15 seconds
+  // 1️⃣ Show first popup
+  adPopup.style.display = "block";
+
+  // Hide first popup after 5 seconds
   setTimeout(() => {
     adPopup.style.display = "none";
-    unlockPopup.style.display = "block";
 
-    // Show download link after message
+    // 2️⃣ After another 15 seconds show unlock popup
     setTimeout(() => {
-      unlockPopup.style.display = "none";
-      downloadLink.style.display = "block";
-    }, 3000); // message visible for 3 seconds
+      unlockPopup.style.display = "block";
 
-  }, 15000);
+      // Hide unlock popup after 3 seconds
+      setTimeout(() => {
+        unlockPopup.style.display = "none";
+        downloadLink.style.display = "block";
+      }, 3000);
+
+    }, 15000);
+
+  }, 5000);
 }
