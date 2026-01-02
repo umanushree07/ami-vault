@@ -318,3 +318,19 @@ footer {
 .unlock-popup {
   animation: popupFade 0.3s ease-in-out;
 }
+
+.download-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #6a1cb7;          /* purple */
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.download-link:hover {
+  color: #4a148c;          /* darker purple on hover */
+  transform: translateY(-1px);
+}
