@@ -103,18 +103,16 @@ AMI Vault is built with the idea of making content feel structured yet personal 
 
   <div class="grid">
 
-    <div class="card bounce">
-
-  <div class="video-card">
+   <div class="video-card">
 
   <!-- Thumbnail -->
   <div class="thumbnail-container" id="thumb-1">
-  <img src="images/HOTS orginial.jpeg" alt="Thumbnail">
-  <div class="play-overlay" onclick="startVideo(1)">▶</div>
-</div>
+    <img src="images/HOTSorginial.jpeg" alt="Thumbnail">
+    <div class="play-overlay" onclick="startVideo(1)">▶</div>
+  </div>
 
-  <!-- Video iframe -->
-  <div class="video-frame" id="video-1">
+  <!-- Video iframe (hidden initially) -->
+  <div class="video-frame" id="video-1" style="display:none;">
     <iframe
       src="https://lykstage.com/l/BY1GT6GT6JQ9IR8AZ0?autoplay=1"
       frameborder="0"
@@ -123,58 +121,46 @@ AMI Vault is built with the idea of making content feel structured yet personal 
     </iframe>
   </div>
 
-</div>
+  <!-- Title -->
+  <h4 class="video-title">HOTS original</h4>
 
-<!-- Cookie popup -->
-<div class="cookie-popup" id="cookiePopup">
-  Click on the thumbnail appeared in the lykstage 
-</div>
+  <!-- Like -->
+  <div class="like-section">
+    <button class="like-btn" onclick="likeVideo(this)">
+      ❤️ <span>0</span>
+    </button>
+  </div>
 
+  <!-- Ad inside card -->
+  <div class="ad-banner small">
+    <!-- PASTE YOUR AD CODE HERE -->
+  </div>
 
-<h4>HOTS orginial</h4>
-<div class="like-section">
-  <button class="like-btn" data-id="hots-1" onclick="likeVideo(this)">
-  ❤️ <span>0</span>
-</button>
-</div>
-
-<div class="ad-banner small">
-  
-</div>
-
+  <!-- Download -->
   <div class="download-section">
-
-  <button class="watch-ad-btn" onclick="watchAdForDownload(this)">
-    Watch Ad to Download
-  </button>
+    <button class="watch-ad-btn" onclick="watchAdForDownload(this)">
+      Watch Ad to Download
+    </button>
+  </div>
 
   <!-- Popup 1 -->
-  <div class="ad-popup" id="adPopup" style="display:none;">NOTE 
-
-<br>
-    Watch Ad banner for 15 seconds to get the Download link 
+  <div class="ad-popup" id="adPopup" style="display:none;">
+    Watch ad banner for 15 seconds to unlock download
   </div>
 
   <!-- Popup 2 -->
   <div class="unlock-popup" id="unlockPopup" style="display:none;">
-    Thank you 
-<br>
-
-Download link is available
+    Download link is available
   </div>
 
   <!-- Download link -->
-  <a
-    href="https://your-download-site.com/file"
-    target="_blank"
-    class="download-link"
-    style="display:none;"
-  >
+  <a href="https://your-download-site.com/file"
+     target="_blank"
+     class="download-link"
+     style="display:none;">
     Download File
   </a>
 
-</div>
-</div>
 </div>
 
 <!--
