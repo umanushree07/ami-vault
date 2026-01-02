@@ -87,7 +87,8 @@ body {
 ========================= */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 30px 16px;
+min-height: auto;
   background: linear-gradient(
     135deg,
     rgba(124, 58, 237, 0.12),
