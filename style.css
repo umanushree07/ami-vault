@@ -164,82 +164,121 @@ min-height: auto;
 /* =========================
    VIDEO CARD (FINAL)
 ========================= */
+
+/* ===== VIDEO CARD ===== */
 .video-card {
-  width: 100%;
-  max-width: 360px;
-  margin: auto;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 8px 24px rgba(122, 60, 255, 0.15);
 }
 
-/* Thumbnail */
+/* ===== THUMBNAIL ===== */
 .thumbnail-container {
   position: relative;
-  width: 100%;
-  height: 200px;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
-  background: #e9d9ff;
 }
 
 .thumbnail-container img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: block;
+  border-radius: 14px;
 }
 
-/* Play overlay */
+/* Play button */
 .play-overlay {
   position: absolute;
   inset: 0;
+  background: rgba(0,0,0,0.35);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 50px;
-  color: white;
-  background: rgba(0, 0, 0, 0.35);
+  font-size: 48px;
+  color: #fff;
   cursor: pointer;
+  z-index: 5;
 }
 
-/* Iframe */
-.video-frame {
-  display: none;
-  width: 100%;
-  height: 200px;
-}
-
+/* ===== VIDEO ===== */
 .video-frame iframe {
   width: 100%;
-  height: 100%;
-  border-radius: 12px;
+  height: 200px;
+  border-radius: 14px;
+  border: none;
 }
 
-/* =========================
-   LIKE & DOWNLOAD
-========================= */
+/* ===== TITLE ===== */
+.video-title {
+  margin: 12px 0 6px;
+  color: #5b2fd6;
+}
+
+/* ===== LIKE ===== */
 .like-section {
-  margin-top: 10px;
+  margin: 10px 0;
+  text-align: center;
 }
 
 .like-btn {
-  background: var(--purple-soft);
+  background: #f1ecff;
   border: none;
-  border-radius: 20px;
-  padding: 6px 14px;
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #7a3cff;
+}
+
+/* ===== AD ===== */
+.ad-banner.small {
+  height: 70px;
+  margin: 12px 0;
+  background: #eaeaea;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== DOWNLOAD ===== */
+.download-section {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.watch-ad-btn {
+  background: #eee7ff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 22px;
   font-size: 15px;
-  color: var(--purple-main);
-  font-weight: 600;
+  color: #7a3cff;
   cursor: pointer;
 }
 
-.card button {
-  margin-top: 14px;
-  width: 100%;
-  padding: 12px;
-  border-radius: 25px;
-  border: none;
-  background: var(--purple-soft);
-  color: var(--purple-main);
-  font-weight: 600;
-  cursor: pointer;
+/* ===== POPUPS ===== */
+.ad-popup,
+.unlock-popup {
+  background: #f3eeff;
+  color: #5b2fd6;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ===== DOWNLOAD LINK ===== */
+.download-link {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: #7a3cff;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /* =========================
