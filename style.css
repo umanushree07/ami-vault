@@ -274,3 +274,13 @@ footer {
   color: var(--purple-main);
   font-size: 14px;
 }
+
+.unlock-popup {
+  margin-top: 10px;
+  padding: 10px;
+  background: #e9ddff;
+  color: #5a189a;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+}
