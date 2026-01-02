@@ -1,4 +1,21 @@
+<script>
+function startVideo() {
+  // Show cookie popup
+  document.getElementById("cookiePopup").style.display = "block";
 
+  // Wait 5 seconds
+  setTimeout(() => {
+    // Hide popup
+    document.getElementById("cookiePopup").style.display = "none";
+
+    // Remove thumbnail
+    document.getElementById("thumbBox").style.display = "none";
+
+    // Show iframe video
+    document.getElementById("videoBox").style.display = "block";
+  }, 5000);
+}
+</script>
 
 // Load saved likes when page opens
 document.addEventListener("DOMContentLoaded", () => {
