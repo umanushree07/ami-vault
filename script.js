@@ -57,3 +57,28 @@ function likeVideo(btn) {
   span.innerText = count;
   localStorage.setItem("likes-" + id, count);
 }
+
+/* Download*/
+function watchAdForDownload(button) {
+  const section = button.parentElement;
+  const adPopup = section.querySelector("#adPopup");
+  const unlockPopup = section.querySelector("#unlockPopup");
+  const downloadLink = section.querySelector(".download-link");
+
+  // Show first popup
+  adPopup.style.display = "block";
+  button.disabled = true;
+
+  // After 15 seconds
+  setTimeout(() => {
+    adPopup.style.display = "none";
+    unlockPopup.style.display = "block";
+
+    // Show download link after message
+    setTimeout(() => {
+      unlockPopup.style.display = "none";
+      downloadLink.style.display = "block";
+    }, 3000); // message visible for 3 seconds
+
+  }, 15000);
+}
