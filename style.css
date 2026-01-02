@@ -343,3 +343,24 @@ footer {
 .ad-banner.small {
   margin: 12px auto;
 }
+
+.menu, .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu > li {
+  display: inline-block;
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background: #fff;
+}
+
+.dropdown:hover > .submenu {
+  display: block;
+}
